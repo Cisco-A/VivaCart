@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VivaCart
 
-## Getting Started
+Welcome to VivaCart, your go-to destination for a seamless and enjoyable online shopping experience.
 
-First, run the development server:
+## Table of Contents
+- Introduction
+- Features
+- Getting Started
+- Installation
+- Usage
+- Contributing
+- License
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introduction
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+VivaCart is a modern and feature-rich ecommerce website built with Next.js, providing users with a responsive and efficient platform for buying and selling a wide range of products.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js Framework: Utilizing the power of Next.js for a fast, server-rendered React application.
+- Responsive Design: Ensuring a seamless user experience across various devices.
+- Product Catalog: Browse through a diverse catalog of products.
+- User Authentication: Secure user authentication and authorization.
+- Shopping Cart: Easily add and manage items in your cart.
+- Checkout Process: Smooth and secure checkout process.
 
-## Learn More
+## Usage and Contributing
 
-To learn more about Next.js, take a look at the following resources:
+This is a personal project and it is still in its early phase, as such how to run the project or how to make contributions will not provided yet.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
