@@ -26,6 +26,6 @@ VivaCart is a modern and feature-rich ecommerce website built with Next.js, prov
 
 ## Usage and Contributing
 
-This is a personal project and it is still in its early phase, as such how to run the project or how to make contributions will not provided yet.
+This is a personal project and it is still in its early phase, as such, how to run the project or how to make contributions will not be provided yet.
 
 
