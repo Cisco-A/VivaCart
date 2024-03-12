@@ -17,7 +17,7 @@ export default function Signup() {
           <Image
             src={signChair}
             alt="chair"
-            objectFit="cover"
+            style={ {objectFit: "cover"} }
             className="w-full object-cover md:h-screen md:w-1/2"
           />
 

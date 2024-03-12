@@ -17,7 +17,7 @@ export default function Login() {
           <Image
             src={signChair}
             alt="chair"
-            objectFit="cover"
+            style={ {objectFit: "cover"} }
             className="w-full object-cover md:h-screen md:w-1/2"
           />
 
@@ -63,6 +63,7 @@ export default function Login() {
                     Remember me
                   </span>
                 </label>
+                <Link href="">Forgot password?</Link>
 
                 <button
                   type="submit"
