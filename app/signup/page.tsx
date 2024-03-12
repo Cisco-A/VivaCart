@@ -1,53 +1,99 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import NoFooterLayout from "../NoFooterLayout";
+import signChair from "../../public/sign_chair.png";
+
+export const metadata: Metadata = {
+  title: "Sign Up",
+  description: "Create an account",
+};
 
 export default function Signup() {
-    const UNSPLASH = "https://plus.unsplash.com/premium_photo-1683288446489-71997f24255d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   return (
-    <>
-      <main>
-        <div className="flex max-w-screen-xl justify-center items-center">
-          <Image className="mr-32 rounded-br-[200px]" src={UNSPLASH} width={805} height={781} alt="" />
+    <NoFooterLayout>
+      <div className="">
+        <div className="relative flex flex-col items-center gap-x-[88px] gap-y-10 md:flex-row">
+          <Image
+            src={signChair}
+            alt="chair"
+            objectFit="cover"
+            className="w-full object-cover md:h-screen md:w-1/2"
+          />
 
-          <div className="w-1/3">
-            <h1>Create an account</h1>
-            <p>Enter your details below</p>
-
-            <form action="" className="form-control">
-              <input
-                type="text"
-                placeholder="Name"
-                className="input m-1 rounded-none border-0 border-b border-gray-400"
-              />
-              <input
-                type="text"
-                placeholder="Email or Phone Number"
-                className="input m-1 rounded-none border-0 border-b border-gray-400"
-              />
-              <input
-                type="password"
-                name=""
-                id=""
-                placeholder="Password"
-                className="input m-1 rounded-none border-0 border-b border-gray-400"
-              />
-              <button
-                type="submit"
-                className="hover:secondary-focus btn btn-primary"
-              >
-                Create Account
-              </button>
-
+          <div className="m-auto flex w-[87%] flex-col gap-y-7 text-left md:w-2/4">
+            <div>
+              <h1 className="font-poppins mb-6 text-4xl font-medium">
+                Sign up
+              </h1>
               <p>
-                Already have account?{" "}
-                <Link href={"/login"} className="link">
-                  Log in
+                Already have an account?{" "}
+                <Link href="/login" className="font-semibold text-secondary">
+                  Sign in
                 </Link>
               </p>
-            </form>
+            </div>
+
+            <div className="mb-10 text-left md:mb-auto md:w-3/4">
+              <form action="" className="form-control gap-7">
+                <input
+                  required
+                  type="text"
+                  placeholder="Your name"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
+                />
+                <input
+                  required
+                  type="text"
+                  placeholder="Username"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
+                />
+                <input
+                  required
+                  type="email"
+                  placeholder="Email address"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
+                />
+                <input
+                  required
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Password"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
+                />
+
+                <label htmlFor="priv" className="label justify-normal gap-x-3">
+                  <input
+                    required
+                    type="checkbox"
+                    name=""
+                    id="priv"
+                    className="checkbox"
+                  />
+                  <span className="label-text text-base font-normal">
+                    I agree with{" "}
+                    <Link href="" className="font-semibold">
+                      Privacy Policy
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="" className="font-semibold">
+                      Terms of Use
+                    </Link>
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  className="btn btn-primary text-base text-white hover:bg-transparent hover:text-primary"
+                >
+                  Sign Up
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </NoFooterLayout>
   );
 }

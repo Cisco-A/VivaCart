@@ -1,29 +1,80 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import NoFooterLayout from "../NoFooterLayout";
+import signChair from "../../public/sign_chair.png";
 
+export const metadata: Metadata = {
+    title: "Sign In",
+    description: "Access your account",
+  };
 
 export default function Login() {
-    return(
-        <>
+  return (
+    <NoFooterLayout>
+      <div className="">
+        <div className="relative flex flex-col items-center gap-x-[88px] gap-y-10 md:flex-row">
+          <Image
+            src={signChair}
+            alt="chair"
+            objectFit="cover"
+            className="w-full object-cover md:h-screen md:w-1/2"
+          />
+
+          <div className="m-auto flex w-[87%] flex-col gap-y-7 text-left md:w-2/4">
             <div>
-                <Image 
-                src={""}
-                width={0}
-                height={0}
-                alt=""
+              <h1 className="font-poppins mb-6 text-4xl font-medium">
+                Sign in
+              </h1>
+              <p>
+                Already have an account?{" "}
+                <Link href="/login" className="font-semibold text-secondary">
+                  Sign in
+                </Link>
+              </p>
+            </div>
+
+            <div className="mb-10 text-left md:mb-auto md:w-3/4">
+              <form action="" className="form-control gap-7">
+                <input
+                  required
+                  type="text"
+                  placeholder="Username or email address"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
+                />
+                <input
+                  required
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Password"
+                  className="input m-1 rounded-none border-0 border-b border-gray-400 px-0 focus:outline-none"
                 />
 
-                <div>
-                    <h1>Log in to Exclusive</h1>
-                    <p>Enter your details below</p>
+                <label htmlFor="remember" className="label justify-normal gap-x-3">
+                  <input
+                    required
+                    type="checkbox"
+                    name=""
+                    id="remember"
+                    className="checkbox"
+                  />
+                  <span className="label-text text-base font-normal">
+                    Remember me
+                  </span>
+                </label>
 
-                    <form action="" className="">
-                        <input type="text" placeholder="Email or Phone Number" />
-                        <input type="password" name="" id="" placeholder="Password" />
-                        <button type="submit" className="btn-primary">Log in</button>
-                        <p>Forgot Password?</p>
-                    </form>
-                </div>
+                <button
+                  type="submit"
+                  className="btn btn-primary text-base text-white hover:bg-transparent hover:text-primary"
+                >
+                  Sign In
+                </button>
+              </form>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </NoFooterLayout>
+  );
 }

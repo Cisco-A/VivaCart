@@ -6,14 +6,22 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
+  },
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
       {
         lightTheme: {
-        "primary": "#DB4444",
+        "primary": "#000000",
         "primary-focus": "#E07575",        
-        "secondary": "#00FF66",
+        "secondary": "#38CB89",
         "secondary-focus": "A0BCE0",        
         "accent": "#7D8184",
         "neutral": "#120d01",
